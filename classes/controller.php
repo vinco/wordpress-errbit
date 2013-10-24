@@ -1,10 +1,10 @@
 <?php
 
-function airbrake_wordpress_admin_menu () {
-    add_menu_page( AW_TITLE, 'Airbrake Wordpress', 'administrator', AW_SLUG, 'airbrake_wordpress_settings' );
+function errbit_wordpress_admin_menu () {
+    add_menu_page( AW_TITLE, 'Errbit Wordpress', 'administrator', AW_SLUG, 'errbit_wordpress_settings' );
 }
 
-function airbrake_wordpress_settings () {
+function errbit_wordpress_settings () {
 
     if ( ! function_exists( 'submit_button' ) ) {
 	function submit_button() {
