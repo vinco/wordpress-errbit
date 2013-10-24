@@ -1,7 +1,7 @@
 <div class="wrap">
 <img style="float:left; padding:4px; padding-top:8px; padding-right:12px" src="<?php echo plugin_dir_url( __FILE__ ); ?>../plugin/images/icon.png"></img><h2 >Errbit Wordpress</h2>
 <p>Errbit is a tool that collects and aggregates errors for webapps. This Plugin makes it simple to track PHP errors in your Wordpress install. Once installed it'll collect all errors with the Wordpress Core and Wordpress Plugins.</p>
-<p>This plugin requires an Errbit account. Sign up for a <a href="https://signup.airbrake.io/account/new?dev=true">Paid</a> or a <a href="https://signup.airbrake.io/account/new/Free">Free account</a>.
+<p>This plugin requires an Errbit installation. <a href="https://github.com/errbit/errbit">Learn more about errbit.</a>
 <form method="post" action="options.php">
 <?php wp_nonce_field( 'update-options' ); ?>
 

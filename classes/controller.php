@@ -7,7 +7,7 @@ function errbit_wordpress_admin_menu () {
 function errbit_wordpress_settings () {
 
     if ( ! function_exists( 'submit_button' ) ) {
-	function submit_button() {
+			function submit_button() {
 		echo '<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes"></p>';
         }
     }

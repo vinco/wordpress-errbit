@@ -34,10 +34,6 @@ An exceptions happens when part of your Wordpress site crashes and it's not setu
 
 Plugins can often cause parts of your Wordpress install to crash and stall. This plugin lets you identify other plugins fast, and you can send on information to other developers so they can errors FAST. 
 
-== Screenshots ==
-
-![Wordpress Dashboard](/assets/ab-wp.png)
-
 == Changelog ==
 
 = 0.1 =

@@ -4,8 +4,8 @@
 Plugin Name: errbit-wordpress
 Description: Errbit Wordpress
 
-Author: Errbit.io
-Author URI: https://github.com/airbrake/errbit-wordpress
+Author: Aibrake.io, Michael Bianco (@iloveitaly)
+Author URI: https://github.com/airbrake
 
 Description: Errbit lets you discover errors and bugs in your Wordpress install. 
 
