@@ -1,0 +1,3 @@
+[submodule "classes/errbit-php"]
+	path = classes/errbit-php
+	url = git@github.com:flippa/errbit-php.git
