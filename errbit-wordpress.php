@@ -8,10 +8,10 @@ Author: Aibrake.io, Michael Bianco (@iloveitaly)
 Author URI: https://github.com/airbrake
 Plugin URI: https://github.com/iloveitaly/wordpress-errbit
 
-Description: Errbit lets you discover errors and bugs in your Wordpress install. 
+Description: Errbit lets you discover errors and bugs in your Wordpress install.
 
-Version: 1.0
-License: GPL 
+Version: 1.1
+License: GPL
 */
 
 global $wpdb;
@@ -37,10 +37,15 @@ if ( get_option('errbit_wordpress_setting_status') ) {
 	$errbit_api  = trim( get_option( 'errbit_wordpress_setting_apikey' ) );
 	$errbit_url  = trim( get_option( 'errbit_wordpress_setting_url' ) );
 
+	$warnings = (int) get_option( 'errbit_wordpress_setting_warrings' );
+	$handlers = array( 'error', 'exception', 'fatal' );
+	if ($warnings === 0) {
+		unset($handlers[0]);
+	}
+
 	// legacy from the airbrake plugin
 	// $async = (boolean) get_option( 'errbit_wordpress_setting_async' );
 	// $timeout = (int) get_option( 'errbit_wordpress_setting_timeout' );
-	// $warrings = get_option( 'errbit_wordpress_setting_warrings' );
 
 	Errbit::instance()
 	  ->configure(array(
@@ -55,5 +60,5 @@ if ( get_option('errbit_wordpress_setting_status') ) {
 	    // 'params_filters'    => array('/password/', '/card_number/'), // optional
 	    // 'backtrace_filters' => array('#/some/long/path#' => '')      // optional
 	  ))
-	  ->start();
+	  ->start( $handlers );
 }
