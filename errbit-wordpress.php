@@ -36,6 +36,7 @@ if ( get_option('errbit_wordpress_setting_status') ) {
 	require_once 'classes/errbit-php/lib/Errbit.php';
 	$errbit_api  = trim( get_option( 'errbit_wordpress_setting_apikey' ) );
 	$errbit_url  = trim( get_option( 'errbit_wordpress_setting_url' ) );
+	$errbit_environment_name = trim( get_option( 'errbit_wordpress_setting_environment_name' ) );
 
 	$warnings = (int) get_option( 'errbit_wordpress_setting_warrings' );
 	$handlers = array( 'error', 'exception', 'fatal' );
@@ -51,6 +52,7 @@ if ( get_option('errbit_wordpress_setting_status') ) {
 	  ->configure(array(
 	    'api_key'           => $errbit_api,
 	    'host'              => $errbit_url,
+	    'environment_name'  => $errbit_environment_name
 
 	    // TODO support more of the options
 	    // 'port'              => 80,                                   // optional
