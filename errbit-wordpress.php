@@ -44,10 +44,6 @@ if ( get_option('errbit_wordpress_setting_status') ) {
 		unset($handlers[0]);
 	}
 
-	// legacy from the airbrake plugin
-	// $async = (boolean) get_option( 'errbit_wordpress_setting_async' );
-	// $timeout = (int) get_option( 'errbit_wordpress_setting_timeout' );
-
 	Errbit::instance()
 	  ->configure(array(
 	    'api_key'           => $errbit_api,
@@ -58,7 +54,6 @@ if ( get_option('errbit_wordpress_setting_status') ) {
 	    // 'port'              => 80,                                   // optional
 	    // 'secure'            => false,                                // optional
 	    // 'project_root'      => '/your/project/root',                 // optional
-	    // 'environment_name'  => 'production',                         // optional
 	    // 'params_filters'    => array('/password/', '/card_number/'), // optional
 	    // 'backtrace_filters' => array('#/some/long/path#' => '')      // optional
 	  ))

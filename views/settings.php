@@ -32,11 +32,6 @@
         <td><input type="text" size="45" name="errbit_wordpress_setting_apikey" value="<?php echo get_option( 'errbit_wordpress_setting_apikey' ); ?>" /><br><p><a href="https://github.com/errbit/errbit">Learn more about Errbit</a></p></td>
         </tr>
 
-        <!-- <tr valign="top">
-        <th scope="row">Timeout</th>
-        <td><input type="text" size="2" name="errbit_wordpress_setting_timeout" value="<?php echo get_option( 'errbit_wordpress_setting_timeout' ); ?>" /></td>
-        </tr> -->
-
         <tr valign="top">
         <th scope="row">Enable the logging of warning level messages</th>
         <td>
@@ -45,21 +40,11 @@
 		  <option value="1"<?php echo get_option( 'errbit_wordpress_setting_warrings' ) ? ' selected="selected"': '';?>>Yes</option>
 		</select>
         <p>Warning: This option will create a lot of error notification.</p>
-	</td>
+    	</td>
         </tr>
-
-        <!-- <tr valign="top">
-        <th scope="row">Asyncronous Notifications</th>
-        <td>
-		<select name="errbit_wordpress_setting_async">
-		  <option value="0"<?php echo !get_option( 'errbit_wordpress_setting_async' ) ? ' selected="selected"': '';?>>No</option>
-		  <option value="1"<?php echo get_option( 'errbit_wordpress_setting_async' ) ? ' selected="selected"': '';?>>Yes</option>
-		</select>
-	</td>
-        </tr> -->
     </table>
 <input type="hidden" name="action" value="update" />
-<input type="hidden" name="page_options" value="errbit_wordpress_setting_url,errbit_wordpress_setting_status,errbit_wordpress_setting_environment_name,errbit_wordpress_setting_apikey,errbit_wordpress_setting_timeout,errbit_wordpress_setting_warrings,errbit_wordpress_setting_async" />
+<input type="hidden" name="page_options" value="errbit_wordpress_setting_url,errbit_wordpress_setting_status,errbit_wordpress_setting_environment_name,errbit_wordpress_setting_apikey,errbit_wordpress_setting_warrings" />
 
     <?php submit_button(); ?>
 
