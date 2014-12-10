@@ -22,6 +22,12 @@
 
         </tr>
         <tr valign="top">
+        <th scope="row">Enviroment Name</th>
+        <td><input type="text" size="45" name="errbit_wordpress_setting_environment_name" value="<?php echo get_option( 'errbit_wordpress_setting_environment_name' ); ?>" /></td>
+        </tr>
+
+        </tr>
+        <tr valign="top">
         <th scope="row">API Key</th>
         <td><input type="text" size="45" name="errbit_wordpress_setting_apikey" value="<?php echo get_option( 'errbit_wordpress_setting_apikey' ); ?>" /><br><p><a href="https://github.com/errbit/errbit">Learn more about Errbit</a></p></td>
         </tr>
@@ -53,7 +59,7 @@
         </tr> -->
     </table>
 <input type="hidden" name="action" value="update" />
-<input type="hidden" name="page_options" value="errbit_wordpress_setting_url,errbit_wordpress_setting_status,errbit_wordpress_setting_apikey,errbit_wordpress_setting_timeout,errbit_wordpress_setting_warrings,errbit_wordpress_setting_async" />
+<input type="hidden" name="page_options" value="errbit_wordpress_setting_url,errbit_wordpress_setting_status,errbit_wordpress_setting_environment_name,errbit_wordpress_setting_apikey,errbit_wordpress_setting_timeout,errbit_wordpress_setting_warrings,errbit_wordpress_setting_async" />
 
     <?php submit_button(); ?>
 
